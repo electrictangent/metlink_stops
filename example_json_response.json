@@ -1,0 +1,2906 @@
+{
+    "farezone": "1",
+    "closed": false,
+    "departures": [
+        {
+            "stop_id": "5515",
+            "service_id": "14",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7224",
+                "name": "Kilbirnie-B"
+            },
+            "destination": {
+                "stop_id": "4136",
+                "name": "Wilton"
+            },
+            "delay": "PT4M26S",
+            "vehicle_id": "5750",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T19:49:00+13:00",
+                "expected": "2023-02-22T19:53:26+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T19:49:00+13:00",
+                "expected": "2023-02-22T19:55:01+13:00"
+            },
+            "status": "delayed",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "14__0__183__NBM__17__5__17__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "-PT8S",
+            "vehicle_id": "5739",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T19:56:00+13:00",
+                "expected": "2023-02-22T19:55:52+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T19:56:00+13:00",
+                "expected": "2023-02-22T19:55:52+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "2__0__323__NBM__86__1__86__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "3",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7338",
+                "name": "LyallBay-Hungerford"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT1M11S",
+            "vehicle_id": "1474",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T19:55:00+13:00",
+                "expected": "2023-02-22T19:56:11+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T19:55:00+13:00",
+                "expected": "2023-02-22T19:56:11+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "3__1__256__NBM__12__5__12__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3040",
+                "name": "J'ville West"
+            },
+            "delay": "PT19M29S",
+            "vehicle_id": "3507",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T19:37:00+13:00",
+                "expected": "2023-02-22T19:56:29+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T19:37:00+13:00",
+                "expected": "2023-02-22T19:56:29+13:00"
+            },
+            "status": "delayed",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "1__0__261__TZM__410__2__410__2_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "24",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "6081",
+                "name": "MiramarShops-B"
+            },
+            "destination": {
+                "stop_id": "3000",
+                "name": "Johnsonville"
+            },
+            "delay": "PT5M55S",
+            "vehicle_id": "3404",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T19:51:00+13:00",
+                "expected": "2023-02-22T19:56:55+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T19:51:00+13:00",
+                "expected": "2023-02-22T19:56:55+13:00"
+            },
+            "status": "delayed",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "24__0__153__TZM__790__790_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3279",
+                "name": "Churton Park"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T19:58:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T19:58:00+13:00",
+                "expected": null
+            },
+            "status": "cancelled",
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__263__TZM__413__2__413__2_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7241",
+                "name": "Miramar-DarlingtonR"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "-PT1M25S",
+            "vehicle_id": "5704",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:03:00+13:00",
+                "expected": "2023-02-22T20:01:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:03:00+13:00",
+                "expected": "2023-02-22T20:01:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "2__0__325__NBM__43__5__43__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "52",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "5000",
+                "name": "CourtenayPl-A"
+            },
+            "destination": {
+                "stop_id": "3250",
+                "name": "Johnsonville"
+            },
+            "delay": "-PT1M25S",
+            "vehicle_id": "7162",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:03:00+13:00",
+                "expected": "2023-02-22T20:01:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:03:00+13:00",
+                "expected": "2023-02-22T20:01:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "52__0__155__MNM__3222__1__3222__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "AX",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "7399",
+                "name": "WgtnIntlAirport"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "-PT2M5S",
+            "vehicle_id": "7815",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:04:00+13:00",
+                "expected": "2023-02-22T20:01:55+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:04:00+13:00",
+                "expected": "2023-02-22T20:01:55+13:00"
+            },
+            "status": "early",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "AX__0__233__MNM__6072__1__6072__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "12",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7099",
+                "name": "StrathmorePkTmns"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:04:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:04:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "12__1__102__NBM__80__1__80__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "-PT1M25S",
+            "vehicle_id": "5721",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:11:00+13:00",
+                "expected": "2023-02-22T20:09:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:11:00+13:00",
+                "expected": "2023-02-22T20:09:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "2__0__327__NBM__81__1__81__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "3",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7338",
+                "name": "LyallBay-Hungerford"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "-PT3M7S",
+            "vehicle_id": "2482",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:15:00+13:00",
+                "expected": "2023-02-22T20:11:53+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:15:00+13:00",
+                "expected": "2023-02-22T20:11:53+13:00"
+            },
+            "status": "early",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "3__1__288__NBM__38__6__38__6_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "AX",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "7399",
+                "name": "WgtnIntlAirport"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "-PT3M57S",
+            "vehicle_id": "7812",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:19:00+13:00",
+                "expected": "2023-02-22T20:15:03+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:19:00+13:00",
+                "expected": "2023-02-22T20:15:03+13:00"
+            },
+            "status": "early",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "AX__0__235__MNM__6102__1__6102__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3451",
+                "name": "Grenada Vlg"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__265__TZM__415__3__415__3_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7241",
+                "name": "Miramar-DarlingtonR"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "-PT1M25S",
+            "vehicle_id": "5709",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:18:00+13:00",
+                "expected": "2023-02-22T20:16:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:18:00+13:00",
+                "expected": "2023-02-22T20:16:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "2__0__329__NBM__44__3__44__3_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "14",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7224",
+                "name": "Kilbirnie-B"
+            },
+            "destination": {
+                "stop_id": "4136",
+                "name": "Wilton"
+            },
+            "delay": "-PT18S",
+            "vehicle_id": "5742",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:19:00+13:00",
+                "expected": "2023-02-22T20:18:42+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:19:00+13:00",
+                "expected": "2023-02-22T20:18:42+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "14__0__185__NBM__41__5__41__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "-PT1M25S",
+            "vehicle_id": "5732",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:25:00+13:00",
+                "expected": "2023-02-22T20:23:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:25:00+13:00",
+                "expected": "2023-02-22T20:23:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "2__0__331__NBM__1__5__1__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "52",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "5000",
+                "name": "CourtenayPl-A"
+            },
+            "destination": {
+                "stop_id": "3250",
+                "name": "Johnsonville"
+            },
+            "delay": "-PT1M18S",
+            "vehicle_id": "7152",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:33:00+13:00",
+                "expected": "2023-02-22T20:31:42+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:33:00+13:00",
+                "expected": "2023-02-22T20:31:42+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "52__0__157__MNM__3052__1__3052__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "12",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7099",
+                "name": "StrathmorePkTmns"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:34:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:34:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "12__1__158__NBM__32__5__32__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "3",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7338",
+                "name": "LyallBay-Hungerford"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:35:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:35:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "3__1__258__NBM__64__1__64__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "AX",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "7399",
+                "name": "WgtnIntlAirport"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "-PT3M22S",
+            "vehicle_id": "7814",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:39:00+13:00",
+                "expected": "2023-02-22T20:35:38+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:39:00+13:00",
+                "expected": "2023-02-22T20:35:38+13:00"
+            },
+            "status": "early",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "AX__0__237__MNM__6082__1__6082__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7241",
+                "name": "Miramar-DarlingtonR"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__333__NBM__59__1__59__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "29",
+            "direction": "inbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7720",
+                "name": "Brooklyn-B"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "29__1__134__TZM__970__970_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3040",
+                "name": "J'ville West"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:37:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:37:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__267__TZM__417__3__417__3_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "83",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "5000",
+                "name": "CourtenayPl-A"
+            },
+            "destination": {
+                "stop_id": "9858",
+                "name": "Eastbourne"
+            },
+            "delay": "PT0S",
+            "vehicle_id": "5737",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:38:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:38:00+13:00",
+                "expected": null
+            },
+            "status": "cancelled",
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "83__0__151__NBM__29__5__29__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "23",
+            "direction": "inbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7937",
+                "name": "HgtnBayRd nr Cave"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:42:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:42:00+13:00",
+                "expected": null
+            },
+            "status": "cancelled",
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "23__1__154__TZM__717__717_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:47:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:47:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__335__NBM__9__5__9__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "24",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "6081",
+                "name": "MiramarShops-B"
+            },
+            "destination": {
+                "stop_id": "3000",
+                "name": "Johnsonville"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:47:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:47:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "24__0__155__TZM__794__794_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "14",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7224",
+                "name": "Kilbirnie-B"
+            },
+            "destination": {
+                "stop_id": "4136",
+                "name": "Wilton"
+            },
+            "delay": "-PT18S",
+            "vehicle_id": "5720",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:49:00+13:00",
+                "expected": "2023-02-22T20:48:42+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:49:00+13:00",
+                "expected": "2023-02-22T20:48:42+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "14__0__187__NBM__72__1__72__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "AX",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "7399",
+                "name": "WgtnIntlAirport"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "-PT3M22S",
+            "vehicle_id": "7816",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:59:00+13:00",
+                "expected": "2023-02-22T20:55:38+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:59:00+13:00",
+                "expected": "2023-02-22T20:55:38+13:00"
+            },
+            "status": "early",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "AX__0__239__MNM__6112__1__6112__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3279",
+                "name": "Churton Park"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T20:56:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T20:56:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__269__TZM__419__2__419__2_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "3",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7338",
+                "name": "LyallBay-Hungerford"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "-PT3M7S",
+            "vehicle_id": "5718",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:00:00+13:00",
+                "expected": "2023-02-22T20:56:53+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:00:00+13:00",
+                "expected": "2023-02-22T20:56:53+13:00"
+            },
+            "status": "early",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "3__1__260__NBM__50__1__50__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "12",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7099",
+                "name": "StrathmorePkTmns"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "-PT1M25S",
+            "vehicle_id": "2457",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:00:00+13:00",
+                "expected": "2023-02-22T20:58:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:00:00+13:00",
+                "expected": "2023-02-22T20:58:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "12__1__160__NBM__47__1__47__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7241",
+                "name": "Miramar-DarlingtonR"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "-PT1M25S",
+            "vehicle_id": "5731",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:03:00+13:00",
+                "expected": "2023-02-22T21:01:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:03:00+13:00",
+                "expected": "2023-02-22T21:01:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "2__0__337__NBM__34__5__34__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "52",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "5000",
+                "name": "CourtenayPl-A"
+            },
+            "destination": {
+                "stop_id": "3250",
+                "name": "Johnsonville"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:03:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:03:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "52__0__159__MNM__3142__1__3142__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "27",
+            "direction": "inbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "6730",
+                "name": "Kingston-B"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:04:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:04:00+13:00",
+                "expected": null
+            },
+            "status": "cancelled",
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "27__1__134__TZM__922__922_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "29",
+            "direction": "inbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7720",
+                "name": "Brooklyn-B"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "29__1__136__TZM__972__972_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3451",
+                "name": "Grenada Vlg"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__271__TZM__421__1__421__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "-PT1M25S",
+            "vehicle_id": "5747",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:19:00+13:00",
+                "expected": "2023-02-22T21:17:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:19:00+13:00",
+                "expected": "2023-02-22T21:17:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "2__0__339__NBM__18__5__18__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "14",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7224",
+                "name": "Kilbirnie-B"
+            },
+            "destination": {
+                "stop_id": "4136",
+                "name": "Wilton"
+            },
+            "delay": "-PT25S",
+            "vehicle_id": "2214",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:19:00+13:00",
+                "expected": "2023-02-22T21:18:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:19:00+13:00",
+                "expected": "2023-02-22T21:18:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "14__0__189__NBM__52__1__52__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "AX",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "7399",
+                "name": "WgtnIntlAirport"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:24:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:24:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "AX__0__241__MNM__6102__1__6102__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "12",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7099",
+                "name": "StrathmorePkTmns"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "-PT1M25S",
+            "vehicle_id": "2482",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:30:00+13:00",
+                "expected": "2023-02-22T21:28:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:30:00+13:00",
+                "expected": "2023-02-22T21:28:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "12__1__162__NBM__38__6__38__6_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "3",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7338",
+                "name": "LyallBay-Hungerford"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": "5724",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:30:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:30:00+13:00",
+                "expected": null
+            },
+            "status": "cancelled",
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "3__1__262__NBM__36__5__36__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7241",
+                "name": "Miramar-DarlingtonR"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "-PT1M25S",
+            "vehicle_id": "5739",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:33:00+13:00",
+                "expected": "2023-02-22T21:31:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:33:00+13:00",
+                "expected": "2023-02-22T21:31:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "2__0__341__NBM__86__1__86__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "23",
+            "direction": "inbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7937",
+                "name": "HgtnBayRd nr Cave"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:35:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:35:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "23__1__156__TZM__719__719_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3040",
+                "name": "J'ville West"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:37:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:37:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__273__TZM__423__1__423__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "83",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "5000",
+                "name": "CourtenayPl-A"
+            },
+            "destination": {
+                "stop_id": "9858",
+                "name": "Eastbourne"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:38:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:38:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "83__0__153__NBM__210__4__210__4_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "24",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "6081",
+                "name": "MiramarShops-B"
+            },
+            "destination": {
+                "stop_id": "3000",
+                "name": "Johnsonville"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "24__0__157__TZM__796__796_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:49:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:49:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__343__NBM__2__5__2__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "14",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7224",
+                "name": "Kilbirnie-B"
+            },
+            "destination": {
+                "stop_id": "4136",
+                "name": "Wilton"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:49:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:49:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "14__0__191__NBM__44__3__44__3_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "AX",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "7399",
+                "name": "WgtnIntlAirport"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:52:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:52:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "AX__0__243__MNM__6082__1__6082__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "27",
+            "direction": "inbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "6730",
+                "name": "Kingston-B"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:55:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:55:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "27__1__136__TZM__924__924_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3279",
+                "name": "Churton Park"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T21:56:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T21:56:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__275__TZM__425__1__425__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "3",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7338",
+                "name": "LyallBay-Hungerford"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:00:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:00:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "3__1__264__NBM__203__9__203__9_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "12",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7099",
+                "name": "StrathmorePkTmns"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:00:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:00:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "12__1__176__NBM__8__5__8__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7241",
+                "name": "Miramar-DarlingtonR"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:03:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:03:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__345__NBM__46__1__46__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "29",
+            "direction": "inbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7720",
+                "name": "Brooklyn-B"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:03:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:03:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "29__1__138__TZM__974__974_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "52",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "5000",
+                "name": "CourtenayPl-A"
+            },
+            "destination": {
+                "stop_id": "3250",
+                "name": "Johnsonville"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:03:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:03:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "52__0__161__MNM__3222__1__3222__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "AX",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "7399",
+                "name": "WgtnIntlAirport"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:12:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:12:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "AX__0__245__MNM__6112__1__6112__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3451",
+                "name": "Grenada Vlg"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__281__TZM__427__1__427__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:17:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:17:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__347__NBM__17__5__17__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "3",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7338",
+                "name": "LyallBay-Hungerford"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:25:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:25:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "3__1__266__NBM__85__1__85__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "12",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7099",
+                "name": "StrathmorePkTmns"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "-PT1M25S",
+            "vehicle_id": "5730",
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:30:00+13:00",
+                "expected": "2023-02-22T22:28:35+13:00"
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:30:00+13:00",
+                "expected": "2023-02-22T22:28:35+13:00"
+            },
+            "status": "ontime",
+            "monitored": true,
+            "wheelchair_accessible": true,
+            "trip_id": "12__1__164__NBM__67__1__67__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7241",
+                "name": "Miramar-DarlingtonR"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:34:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:34:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__349__NBM__1__5__1__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "23",
+            "direction": "inbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7937",
+                "name": "HgtnBayRd nr Cave"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:35:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:35:00+13:00",
+                "expected": null
+            },
+            "status": "cancelled",
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "23__1__158__TZM__721__721_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "83",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "5000",
+                "name": "CourtenayPl-A"
+            },
+            "destination": {
+                "stop_id": "9858",
+                "name": "Eastbourne"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:37:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:37:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "83__0__155__NBM__203__9__203__9_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3040",
+                "name": "J'ville West"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:37:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:37:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__277__TZM__429__1__429__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "AX",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "7399",
+                "name": "WgtnIntlAirport"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:42:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:42:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "AX__0__247__MNM__6082__1__6082__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "24",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "6081",
+                "name": "MiramarShops-B"
+            },
+            "destination": {
+                "stop_id": "3000",
+                "name": "Johnsonville"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "24__0__159__TZM__798__798_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:47:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:47:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__351__NBM__59__1__59__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "14",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7224",
+                "name": "Kilbirnie-B"
+            },
+            "destination": {
+                "stop_id": "4136",
+                "name": "Wilton"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:49:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:49:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "14__0__195__NBM__27__5__27__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "27",
+            "direction": "inbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "6730",
+                "name": "Kingston-B"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T22:55:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T22:55:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "27__1__138__TZM__926__926_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "29",
+            "direction": "inbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7720",
+                "name": "Brooklyn-B"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T23:00:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T23:00:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "29__1__140__TZM__976__976_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7241",
+                "name": "Miramar-DarlingtonR"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T23:02:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T23:02:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__353__NBM__9__5__9__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "52",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "5000",
+                "name": "CourtenayPl-A"
+            },
+            "destination": {
+                "stop_id": "3250",
+                "name": "Johnsonville"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T23:03:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T23:03:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "52__0__163__MNM__3142__1__3142__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3279",
+                "name": "Churton Park"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T23:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T23:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__279__TZM__432__1__432__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T23:18:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T23:18:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__355__NBM__2__5__2__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "3",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7338",
+                "name": "LyallBay-Hungerford"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T23:25:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T23:25:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "3__1__270__NBM__8__5__8__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7241",
+                "name": "Miramar-DarlingtonR"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T23:32:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T23:32:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__357__NBM__86__1__86__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3451",
+                "name": "Grenada Vlg"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T23:36:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T23:36:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__283__TZM__434__1__434__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T23:48:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T23:48:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__359__NBM__19__5__19__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "14",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7224",
+                "name": "Kilbirnie-B"
+            },
+            "destination": {
+                "stop_id": "4136",
+                "name": "Wilton"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T23:49:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T23:49:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "14__0__199__NBM__72__1__72__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "3",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7338",
+                "name": "LyallBay-Hungerford"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-22T23:55:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-22T23:55:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "3__1__272__NBM__67__1__67__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3279",
+                "name": "Churton Park"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T00:06:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T00:06:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__285__TZM__436__1__436__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7241",
+                "name": "Miramar-DarlingtonR"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T05:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T05:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__101__NBM__12__5__12__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "AX",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "7399",
+                "name": "WgtnIntlAirport"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T05:47:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T05:47:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "AX__0__101__MNM__6011__1__6011__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3279",
+                "name": "Churton Park"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:04:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:04:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__101__TZM__245__245_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:04:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:04:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__103__NBM__4__5__4__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "AX",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "7399",
+                "name": "WgtnIntlAirport"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:09:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:09:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "AX__0__103__MNM__6021__1__6021__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7241",
+                "name": "Miramar-DarlingtonR"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:16:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:16:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__105__NBM__9__5__9__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "3",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7026",
+                "name": "Kilbirnie-C"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:23:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:23:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "3__1__280__NBM__14__5__14__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3451",
+                "name": "Grenada Vlg"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:24:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:24:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__103__TZM__248__248_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "AX",
+            "direction": "outbound",
+            "operator": "MNM",
+            "origin": {
+                "stop_id": "7399",
+                "name": "WgtnIntlAirport"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:29:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:29:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "AX__0__105__MNM__6031__1__6031__1_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "84",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "5000",
+                "name": "CourtenayPl-A"
+            },
+            "destination": {
+                "stop_id": "9858",
+                "name": "Eastbourne"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:32:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:32:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "84__0__111__NBM__23__5__23__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "12",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7099",
+                "name": "StrathmorePkTmns"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:33:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:33:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "12__1__166__NBM__8__5__8__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "2",
+            "direction": "outbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7042",
+                "name": "SeatounPk-HectorSt"
+            },
+            "destination": {
+                "stop_id": "5332",
+                "name": "Karori"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:34:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:34:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "2__0__107__NBM__22__5__22__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "3",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7338",
+                "name": "LyallBay-Hungerford"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:40:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:40:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "3__1__100__NBM__5__5__5__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "31x",
+            "direction": "inbound",
+            "operator": "NBM",
+            "origin": {
+                "stop_id": "7246",
+                "name": "MiramarNRd (57)"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "31x__1__100__NBM__19__5__19__5_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "1",
+            "direction": "outbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7158",
+                "name": "Island Bay-ReefSt a"
+            },
+            "destination": {
+                "stop_id": "3279",
+                "name": "Churton Park"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "1__0__105__TZM__251__251_1"
+        },
+        {
+            "stop_id": "5515",
+            "service_id": "23",
+            "direction": "inbound",
+            "operator": "TZM",
+            "origin": {
+                "stop_id": "7937",
+                "name": "HgtnBayRd nr Cave"
+            },
+            "destination": {
+                "stop_id": "5016",
+                "name": "Wgtn Station"
+            },
+            "delay": "PT0S",
+            "vehicle_id": null,
+            "name": "MannersSt at Cuba-A",
+            "arrival": {
+                "aimed": "2023-02-23T06:46:00+13:00",
+                "expected": null
+            },
+            "departure": {
+                "aimed": "2023-02-23T06:46:00+13:00",
+                "expected": null
+            },
+            "status": null,
+            "monitored": false,
+            "wheelchair_accessible": false,
+            "trip_id": "23__1__100__TZM__665__665_1"
+        }
+    ]
+}
