@@ -3,9 +3,11 @@
 import sys
 from flask import Flask
 from flask import Response
+from flask_cors import CORS
 import pandas as ps
   
 app = Flask(__name__)
+CORS(app)
 
 # Grab response from file then serve
 
