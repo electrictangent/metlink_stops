@@ -1,19 +1,62 @@
 import React from 'react';
 
+// Font Awesome icon imports
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWheelchair } from '@fortawesome/free-solid-svg-icons';
+const wheelchairIcon = <FontAwesomeIcon icon={faWheelchair} />
+
 
 function DepartureRow({ singleDeparture }) {
+  // TODO: Add code to represent arrival time in mintues from now
+  // below is only a sketch - there are many more variables involved in estimated departure times
+  // probably is best to seperate into own function
+  const dateTime = new Date(singleDeparture.arrival.aimed);
+  const dateTimeNow = new Date();
+  const minsAway = String(Math.round((dateTime - dateTimeNow)*0.001/60));
+
+  // Set the accesible icon
+  let accesible = "";
+  if(singleDeparture.wheelchair) {
+    accesible = wheelchairIcon;
+  }
+
+
   return (
     <tr>
       <td>{ singleDeparture.service_id }</td>
-      <td>{ singleDeparture.depart_time }</td>
+      <td>{ singleDeparture.direction }</td>
+      <td>{ minsAway + " mins" }</td>
+      <td>{ singleDeparture.status }</td>
+      <td>{ accesible }</td>
     </tr>
   );
 }
 
 function DepartureTable({ departures }) {
-return(
+  const rows = [];
+
+  departures.forEach((singleDeparture) => {
+    rows.push(<DepartureRow singleDeparture={singleDeparture} key={singleDeparture.tripID} />);
+  })
   
-)
+
+
+return(
+  <table className='table'>
+    <thead>
+      <tr>
+        <th>Service ID</th>
+        <th>Direction</th>
+        <th>Arriving in</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows}
+    </tbody>
+  </table>
+);
 }
 
 function SearchBar() {
@@ -52,62 +95,34 @@ function Header({ stopNum, stopName }) {
 
 const EXAMPLE_TABLE = [
   {
-    "stop_id": "5515",
-    "service_id": "14",
-    "direction": "outbound",
-    "operator": "NBM",
-    "origin": {
-        "stop_id": "7224",
-        "name": "Kilbirnie-B"
-    },
-    "destination": {
-        "stop_id": "4136",
-        "name": "Wilton"
-    },
-    "delay": "PT4M26S",
-    "vehicle_id": "5750",
-    "name": "MannersSt at Cuba-A",
-    "arrival": {
-        "aimed": "2023-02-22T19:49:00+13:00",
-        "expected": "2023-02-22T19:53:26+13:00"
-    },
-    "departure": {
-        "aimed": "2023-02-22T19:49:00+13:00",
-        "expected": "2023-02-22T19:55:01+13:00"
-    },
-    "status": "delayed",
-    "monitored": true,
-    "wheelchair_accessible": true,
-    "trip_id": "14__0__183__NBM__17__5__17__5_1"
-  },
-  {
-    "stop_id": "5515",
     "service_id": "2",
-    "direction": "outbound",
-    "operator": "NBM",
-    "origin": {
-        "stop_id": "7042",
-        "name": "SeatounPk-HectorSt"
-    },
-    "destination": {
-        "stop_id": "5332",
-        "name": "Karori"
-    },
-    "delay": "-PT8S",
-    "vehicle_id": "5739",
-    "name": "MannersSt at Cuba-A",
+    "direction": "Mirarmar - Karori",
     "arrival": {
-        "aimed": "2023-02-22T19:56:00+13:00",
-        "expected": "2023-02-22T19:55:52+13:00"
+      "aimed": "2023-02-26T14:11:35+13:00",
+      "expected": null
     },
     "departure": {
-        "aimed": "2023-02-22T19:56:00+13:00",
-        "expected": "2023-02-22T19:55:52+13:00"
+        "aimed": "2023-02-26T14:10:00+13:00",
+        "expected": null
     },
     "status": "ontime",
-    "monitored": true,
-    "wheelchair_accessible": true,
-    "trip_id": "2__0__323__NBM__86__1__86__1_1"
+    "wheelchair": false,
+    "tripID": "AX__0__853__MNM__8052__1__8052__1_1"
+  },
+  {
+    "service_id": "3",
+    "direction": "Lyall Bay - Wellington Station",
+    "arrival": {
+      "aimed": "2023-02-26T13:53:00+13:00",
+      "expected": "2023-02-26T14:10:20+13:00"
+    },
+    "departure": {
+        "aimed": "2023-02-26T13:53:00+13:00",
+        "expected": "2023-02-26T14:10:20+13:00"
+    },
+    "status": "ontime",
+    "wheelchair": true,
+    "tripID": "27__1__710__TZM__3583__3583_1"
   }
 ]
 
