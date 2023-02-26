@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 
 // Font Awesome icon imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -23,7 +23,7 @@ function DepartureRow({ singleDeparture }) {
 
   return (
     <tr>
-      <td>{ singleDeparture.service_id }</td>
+      <td>{ singleDeparture.serviceID }</td>
       <td>{ singleDeparture.direction }</td>
       <td>{ minsAway + " mins" }</td>
       <td>{ singleDeparture.status }</td>
@@ -124,14 +124,32 @@ const EXAMPLE_TABLE = [
   }
 ]
 
-
-export default function App() {
-
+function DepartureAndSearchBar({ departures }){
   return (
     <>
     <Header stopName={"Lambton Quay"} stopNum={"5515"}/>
-    <DepartureTable departures={EXAMPLE_TABLE} />
+    <DepartureTable departures={departures} />
     </>
+  );
+}
+
+export default function App() {
+  const [departures, getDepartures] = useState([])
+  const API = 'http://localhost:8080/5515'; // backend API address
+  const fetchPost = () => {
+    fetch(API)
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res)
+        getDepartures(res)
+      })
+  }
+  useEffect(() => {
+    fetchPost()
+  }, [])
+  
+  return (
+    <DepartureAndSearchBar departures={ departures } />
 
   );
 }

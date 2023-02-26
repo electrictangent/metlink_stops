@@ -69,23 +69,51 @@ def getStopData(baseURL, stopID, apiKey):
         return err
 
 
+def parseArrivalAndDepartureTimes(object):
+    text = '{'
+    text += ' "aimed" : "' + object["aimed"] + '", '
+
+    if object["expected"] == None:
+        text += '"expected": null }'
+    else:
+        text += '"expected": "' + object["expected"] + '" }'
+
+    return text
+
+def parseDirectionText(origin, destination):
+    text = origin["name"] + " - " + destination["name"]
+    text = text.replace("\'", "")
+    text = text.replace("\"", "")
+
+    return text
+
+def parseStatus(rawStatus):
+    if rawStatus == None:
+        return "null"
+    elif rawStatus == "ontime":
+        return "On Time"
+    else:
+        return rawStatus.capitalize()
+
+
+
 # Grab response from Metlink API then serve
 @app.route('/<stopID>')
 def main(stopID):
     rawJSONfromMetlink = getStopData(baseURL=configParams["baseURL"], stopID=stopID, apiKey=configParams["apiKey"])
     departuresList = rawJSONfromMetlink["departures"]
     
-    text_response = '{\n\t"list" : [\n'
+    text_response = '[\n'
     for singleTrip in departuresList:
         singleTripText = '\t{\n'
         # Add keys and values
         singleTripText += '\t\t"serviceID" : "' + singleTrip["service_id"] + '",\n'
-        # TODO: Add a function to make station name human readable
-        singleTripText += '\t\t"direction" : "' + singleTrip["origin"]["name"] + " - " + singleTrip["destination"]["name"] + '",\n'
-        singleTripText += '\t\t"arrival" : ' + str(singleTrip["arrival"]) + ',\n'
-        singleTripText += '\t\t"departure" : ' + str(singleTrip["departure"]) + ',\n'
-        singleTripText += '\t\t"status" : "' + str(singleTrip["status"]) + '",\n'
-        singleTripText += '\t\t"wheelchair" : ' + str(singleTrip["wheelchair_accessible"]) + ',\n'
+
+        singleTripText += '\t\t"direction" : "' + parseDirectionText(singleTrip["origin"], singleTrip["destination"]) + '",\n'
+        singleTripText += '\t\t"arrival" : ' + parseArrivalAndDepartureTimes(singleTrip["arrival"]) + ',\n'
+        singleTripText += '\t\t"departure" : ' + parseArrivalAndDepartureTimes(singleTrip["departure"])  + ',\n'
+        singleTripText += '\t\t"status" : "' + parseStatus(singleTrip["status"]) + '",\n'
+        singleTripText += '\t\t"wheelchair" : ' + str(singleTrip["wheelchair_accessible"]).lower() + ',\n'
         singleTripText += '\t\t"tripID" : "' + str(singleTrip["trip_id"]) + '"\n'
         
         # Last item in array does not need a trailing comma for correct JSON
@@ -98,12 +126,7 @@ def main(stopID):
         text_response += singleTripText
 
     # Finish text_response and make string JSON compliant
-    text_response += "\t]\n}"
-    text_response = text_response.replace("'", "\"")
-    text_response = text_response.replace("True", "true")
-    text_response = text_response.replace("False", "false")
-    text_response = text_response.replace("None", "null")
-    
+    text_response += "\n]"    
     return Response(text_response, mimetype='application/json')
 
 
