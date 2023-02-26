@@ -2,6 +2,8 @@
 
 Simple react app that shows stop departures based on stop number/ID
 
+![App Screenshot](preview.png)
+
 ## Backend config
 To use backend server, you need to create a JSON config file. An example config file is given below.
 
