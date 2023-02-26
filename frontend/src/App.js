@@ -38,25 +38,23 @@ function DepartureTable({ departures }) {
   departures.forEach((singleDeparture) => {
     rows.push(<DepartureRow singleDeparture={singleDeparture} key={singleDeparture.tripID} />);
   })
-  
 
-
-return(
-  <table className='table'>
-    <thead>
-      <tr>
-        <th>Service ID</th>
-        <th>Direction</th>
-        <th>Arriving in</th>
-        <th>Status</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      {rows}
-    </tbody>
-  </table>
-);
+  return(
+    <table className='table'>
+      <thead>
+        <tr>
+          <th>Service ID</th>
+          <th>Direction</th>
+          <th>Arriving in</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows}
+      </tbody>
+    </table>
+  );
 }
 
 function SearchBar() {
