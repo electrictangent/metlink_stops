@@ -23,3 +23,7 @@ table *{
 tbody > tr:nth-of-type(2n+1) > *  {
     background: rgb(68, 68, 68)
 }
+
+.search-button{
+    width: 100%;
+}

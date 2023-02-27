@@ -62,19 +62,21 @@ function SearchBar() {
   function handleClick() {
     console.log('hello');
   }
-
+//<button className="col-sm-4 btn btn-primary" type="submit" onClick={handleClick}>Search</button>
   return (
     <form>
       <div className='row'>
         <div className='col-sm-8'>
           <input 
             type="text" 
-            placeholder="Search..." 
+            placeholder="Enter Stop number" 
             className='form-control'
           />
         </div>
 
-          <button className="col-sm-4 btn btn-primary" type="submit" onClick={handleClick}>Search</button>
+        <div className='col-sm-4'>
+          <input className="btn btn-primary search-button" type="submit" value="Get Stop" />
+        </div>
       </div>
     </form>
   );
