@@ -57,21 +57,27 @@ function DepartureTable({ departures }) {
   );
 }
 
-function SearchBar() {
+function SearchBar({ onSetStopNum }) {
+  const [searchStr, setSearchStr] = useState('5515');
 
-  function handleClick() {
-    console.log('hello');
+  function handleSubmit(e) {
+    e.preventDefault();
+    onSetStopNum(searchStr);
+
+    // console.log(stopNum);
   }
+
 //<button className="col-sm-4 btn btn-primary" type="submit" onClick={handleClick}>Search</button>
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className='row'>
         <div className='col-sm-8'>
           <input 
             type="text" 
+            value={searchStr}
+            onChange={(e) => setSearchStr(e.target.value) }
             placeholder="Enter Stop number" 
-            className='form-control'
-          />
+            className='form-control' />
         </div>
 
         <div className='col-sm-4'>
@@ -82,16 +88,6 @@ function SearchBar() {
   );
 }
 
-function Header({ stopNum, stopName }) {
-  return (
-    <div>
-      <h1>Metlink Stops</h1>
-      <SearchBar />
-      <br />
-      <h2>Stop {stopNum} - {stopName}</h2>
-    </div>
-  );
-}
 
 const EXAMPLE_TABLE = [
   {
@@ -126,32 +122,42 @@ const EXAMPLE_TABLE = [
   }
 ]
 
-function DepartureAndSearchBar({ departures }){
+function HeaderDepartureTable({ departures, stopNumVal, setStopNum } ){
+  const stopName = "test";
+
   return (
     <>
-    <Header stopName={"Lambton Quay"} stopNum={"5515"}/>
+    <div>
+      <h1>Metlink Stops</h1>
+        <SearchBar onSetStopNum={ setStopNum } />
+        <br />
+      <h2>Stop {stopNumVal} - {stopName}</h2>
+    </div>
+
     <DepartureTable departures={departures} />
     </>
   );
 }
 
 export default function App() {
-  const [departures, getDepartures] = useState([])
-  const API = 'http://localhost:8080/5515'; // backend API address
-  const fetchPost = () => {
+  const [departures, setDepartures] = useState([]);
+  const [stopNum, setStopNum] = useState('5515');
+
+  const API = 'http://localhost:8080/' + stopNumVal; // backend API address
+  const fetchDepartures = () => {
     fetch(API)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res)
-        getDepartures(res)
+        //console.log(res)
+        setDepartures(res)
       })
   }
   useEffect(() => {
-    fetchPost()
+    fetchDepartures()
   }, [])
   
   return (
-    <DepartureAndSearchBar departures={ departures } />
+    <HeaderDepartureTable departures={ departures } stopNumVal={ stopNum } setStopNum={ setStopNum } />
 
   );
 }

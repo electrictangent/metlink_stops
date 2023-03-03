@@ -69,15 +69,15 @@ def getStopData(baseURL, stopID, apiKey):
         return err
 
 
-def parseArrivalAndDepartureTimes(object):
+def parseArrivalAndDepartureTimes(dictObject):
     text = '{'
-    text += ' "aimed" : "' + object["aimed"] + '", '
-
-    if object["expected"] == None:
-        text += '"expected": null }'
-    else:
-        text += '"expected": "' + object["expected"] + '" }'
-
+    for key in dictObject:
+        if type(dictObject[key]) == str:
+            text += ' "{}" : '.format(key) + '"{}" ,'.format(dictObject[key])
+        else:
+            text += ' "{}" : '.format(key) + 'null ,'
+    
+    text = text[:-1] + '}'
     return text
 
 def parseDirectionText(origin, destination):
@@ -89,7 +89,7 @@ def parseDirectionText(origin, destination):
 
 def parseStatus(rawStatus):
     if rawStatus == None:
-        return "null"
+        return "Scheduled"
     elif rawStatus == "ontime":
         return "On Time"
     else:
@@ -102,7 +102,8 @@ def parseStatus(rawStatus):
 def main(stopID):
     rawJSONfromMetlink = getStopData(baseURL=configParams["baseURL"], stopID=stopID, apiKey=configParams["apiKey"])
     departuresList = rawJSONfromMetlink["departures"]
-    
+
+
     text_response = '[\n'
     for singleTrip in departuresList:
         singleTripText = '\t{\n'
@@ -124,6 +125,7 @@ def main(stopID):
 
         # Add to response
         text_response += singleTripText
+    
 
     # Finish text_response and make string JSON compliant
     text_response += "\n]"    
