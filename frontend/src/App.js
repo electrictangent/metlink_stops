@@ -57,13 +57,13 @@ function DepartureTable({ departures }) {
   );
 }
 
-function SearchBar({ onSetStopNum }) {
+function SearchBar({ onSetStopNum, onSetStopNumSent }) {
   const [searchStr, setSearchStr] = useState('5515');
 
   function handleSubmit(e) {
     e.preventDefault();
     onSetStopNum(searchStr);
-
+    onSetStopNumSent(true);
     // console.log(stopNum);
   }
 
@@ -89,47 +89,38 @@ function SearchBar({ onSetStopNum }) {
 }
 
 
-const EXAMPLE_TABLE = [
-  {
-    "service_id": "2",
-    "direction": "Mirarmar - Karori",
-    "arrival": {
-      "aimed": "2023-02-26T14:11:35+13:00",
-      "expected": null
-    },
-    "departure": {
-        "aimed": "2023-02-26T14:10:00+13:00",
-        "expected": null
-    },
-    "status": "ontime",
-    "wheelchair": false,
-    "tripID": "AX__0__853__MNM__8052__1__8052__1_1"
-  },
-  {
-    "service_id": "3",
-    "direction": "Lyall Bay - Wellington Station",
-    "arrival": {
-      "aimed": "2023-02-26T13:53:00+13:00",
-      "expected": "2023-02-26T14:10:20+13:00"
-    },
-    "departure": {
-        "aimed": "2023-02-26T13:53:00+13:00",
-        "expected": "2023-02-26T14:10:20+13:00"
-    },
-    "status": "ontime",
-    "wheelchair": true,
-    "tripID": "27__1__710__TZM__3583__3583_1"
-  }
-]
-
-function HeaderDepartureTable({ departures, stopNumVal, setStopNum } ){
+function HeaderDepartureTable(){
+  const [departures, setDepartures] = useState([]);
+  const [stopNumVal, setStopNum] = useState('5515');
+  const [stopNumSent, setStopNumSent] = useState(false);
   const stopName = "test";
+
+  useEffect(() => {
+        const urlAPI = 'http://localhost:8080/' + stopNumVal; // backend API address
+        if(departures.length && !stopNumSent) {
+          
+          return;
+        }
+        const fetchData = async () => {
+          try {
+            const response = await fetch(urlAPI);
+            const json = await response.json();
+            setDepartures(json);
+            setStopNumSent(false);
+            console.log("success");
+          } catch (error) {
+            console.log("error", error);
+          }
+        };
+    
+        fetchData();
+    }, [departures, stopNumSent]);
 
   return (
     <>
     <div>
       <h1>Metlink Stops</h1>
-        <SearchBar onSetStopNum={ setStopNum } />
+        <SearchBar onSetStopNum={ setStopNum } onSetStopNumSent={ setStopNumSent } />
         <br />
       <h2>Stop {stopNumVal} - {stopName}</h2>
     </div>
@@ -139,26 +130,9 @@ function HeaderDepartureTable({ departures, stopNumVal, setStopNum } ){
   );
 }
 
-export default function App() {
-  const [departures, setDepartures] = useState([]);
-  const [stopNum, setStopNum] = useState('5515');
-
-  const API = 'http://localhost:8080/' + stopNumVal; // backend API address
-  const fetchDepartures = () => {
-    fetch(API)
-      .then((res) => res.json())
-      .then((res) => {
-        //console.log(res)
-        setDepartures(res)
-      })
-  }
-  useEffect(() => {
-    fetchDepartures()
-  }, [])
-  
+export default function App() {  
   return (
-    <HeaderDepartureTable departures={ departures } stopNumVal={ stopNum } setStopNum={ setStopNum } />
-
+    <HeaderDepartureTable />
   );
 }
 
