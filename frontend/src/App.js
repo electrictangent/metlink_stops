@@ -2,9 +2,23 @@ import { useState, useEffect } from 'react';
 
 // Font Awesome icon imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWheelchair } from '@fortawesome/free-solid-svg-icons';
-const wheelchairIcon = <FontAwesomeIcon icon={faWheelchair} />
+import { faWheelchair, faClock, faStopwatch, faCalendar, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
+const wheelchairIcon = <FontAwesomeIcon icon={faWheelchair} />
+const stopwatchIcon = <FontAwesomeIcon icon={faStopwatch} />
+const clockIcon = <FontAwesomeIcon icon={faClock} />
+const calendarIcon = <FontAwesomeIcon icon={faCalendar} />
+const magnifyingGlass = <FontAwesomeIcon icon={faMagnifyingGlass} />
+
+function statusToIcon(status) {
+  if(status === "On Time"){
+    return " ";
+  } else if( status=="Delayed" ){
+    return clockIcon
+  } else if( status=="Scheduled" ){
+    return calendarIcon
+  }
+}
 
 function DepartureRow({ singleDeparture }) {
   // TODO: Add code to represent arrival time in mintues from now
@@ -20,14 +34,16 @@ function DepartureRow({ singleDeparture }) {
     accesible = wheelchairIcon;
   }
 
-
+  // background color can be part of API response
+  const backgroundColor = "#12043f"
   return (
     <tr>
-      <td>{ singleDeparture.serviceID }</td>
-      <td>{ singleDeparture.direction }</td>
-      <td>{ minsAway + " mins" }</td>
-      <td>{ singleDeparture.status }</td>
-      <td>{ accesible }</td>
+      <td className='bold'>{ minsAway + " mins" }</td>
+      <td> 
+        <div className='bold service-num' style={{ background : backgroundColor}} >{ singleDeparture.serviceID }</div>
+      </td>  
+      <td> { singleDeparture.direction } </td>
+      <td> <span className='delayed'>{ statusToIcon(singleDeparture.status) }</span> { accesible }</td>
     </tr>
   );
 }
@@ -43,11 +59,10 @@ function DepartureTable({ departures }) {
     <table className='table'>
       <thead>
         <tr>
-          <th>Service ID</th>
-          <th>Direction</th>
-          <th>Arriving in</th>
-          <th>Status</th>
+          <th>{stopwatchIcon}</th>
+          <th>ID</th>
           <th></th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
@@ -71,17 +86,17 @@ function SearchBar({ onSetStopNum, onSetStopNumSent }) {
   return (
     <form onSubmit={handleSubmit}>
       <div className='row'>
-        <div className='col-sm-8'>
+        <div className='col-10'>
           <input 
             type="text" 
             value={searchStr}
             onChange={(e) => setSearchStr(e.target.value) }
             placeholder="Enter Stop number" 
-            className='form-control' />
+            className='search-textbox form-control' />
         </div>
 
-        <div className='col-sm-4'>
-          <input className="btn btn-primary search-button" type="submit" value="Get Stop" />
+        <div className='col-2'>
+          <button className="btn btn-primary search-button" type="submit">{magnifyingGlass}</button>
         </div>
       </div>
     </form>
@@ -118,14 +133,19 @@ function HeaderDepartureTable(){
 
   return (
     <>
-    <div>
-      <h1>Metlink Stops</h1>
+    <div className='header'>
+      <div className='container'>
+        <br />
+        <h1 className='center title'>Metlink Stops</h1>
         <SearchBar onSetStopNum={ setStopNum } onSetStopNumSent={ setStopNumSent } />
         <br />
-      <h2>Stop {stopNumVal} - {stopName}</h2>
+      </div>
     </div>
-
-    <DepartureTable departures={departures} />
+    <div className='container'>
+      <br />
+      <h2>{stopNumVal} &emsp; {stopName}</h2>
+      <DepartureTable departures={departures} />
+    </div>
     </>
   );
 }
