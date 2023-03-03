@@ -2,37 +2,6 @@
 # Backend Flask server that grabs departure data from Metlink Open Data (https://opendata.metlink.org.nz/)
 # then parses it into a easier to use format
 
-#   {
-#     "service_id": "2",
-#     "direction": "Mirarmar - Karori",
-#     "arrival": {
-#       "aimed": "2023-02-26T14:11:35+13:00",
-#       "expected": null
-#     },
-#     "departure": {
-#         "aimed": "2023-02-26T14:10:00+13:00",
-#         "expected": null
-#     },
-#     "status": "ontime",
-#     "wheelchair": false,
-#     "tripID": "AX__0__853__MNM__8052__1__8052__1_1"
-#   },
-#   {
-#     "service_id": "3",
-#     "direction": "Lyall Bay - Wellington Station",
-#     "arrival": {
-#       "aimed": "2023-02-26T13:53:00+13:00",
-#       "expected": "2023-02-26T14:10:20+13:00"
-#     },
-#     "departure": {
-#         "aimed": "2023-02-26T13:53:00+13:00",
-#         "expected": "2023-02-26T14:10:20+13:00"
-#     },
-#     "status": "ontime",
-#     "wheelchair": true,
-#     "tripID": "27__1__710__TZM__3583__3583_1"
-#   }
-
 import sys
 
 # Flask imports

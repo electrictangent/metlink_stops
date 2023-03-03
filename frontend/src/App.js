@@ -2,21 +2,24 @@ import { useState, useEffect } from 'react';
 
 // Font Awesome icon imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWheelchair, faClock, faStopwatch, faCalendar, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faWheelchair, faClock, faStopwatch, faCalendar, faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const wheelchairIcon = <FontAwesomeIcon icon={faWheelchair} />
 const stopwatchIcon = <FontAwesomeIcon icon={faStopwatch} />
 const clockIcon = <FontAwesomeIcon icon={faClock} />
 const calendarIcon = <FontAwesomeIcon icon={faCalendar} />
 const magnifyingGlass = <FontAwesomeIcon icon={faMagnifyingGlass} />
+const xMark = <FontAwesomeIcon icon={faXmark} />
 
 function statusToIcon(status) {
   if(status === "On Time"){
     return " ";
-  } else if( status=="Delayed" ){
+  } else if( status==="Delayed" ){
     return clockIcon
-  } else if( status=="Scheduled" ){
+  } else if( status==="Scheduled" ){
     return calendarIcon
+  } else if( status==="Cancelled"){
+    return xMark
   }
 }
 
@@ -37,13 +40,13 @@ function DepartureRow({ singleDeparture }) {
   // background color can be part of API response
   const backgroundColor = "#12043f"
   return (
-    <tr>
+    <tr className={singleDeparture.status === "Cancelled" ? 'cancelled' : ''}>
       <td className='bold'>{ minsAway + " mins" }</td>
       <td> 
         <div className='bold service-num' style={{ background : backgroundColor}} >{ singleDeparture.serviceID }</div>
       </td>  
       <td> { singleDeparture.direction } </td>
-      <td> <span className='delayed'>{ statusToIcon(singleDeparture.status) }</span> { accesible }</td>
+      <td> <span className={singleDeparture.status === "Delayed" ? 'delayed' : ''}>{ statusToIcon(singleDeparture.status) }</span> { accesible }</td>
     </tr>
   );
 }
@@ -85,19 +88,16 @@ function SearchBar({ onSetStopNum, onSetStopNumSent }) {
 //<button className="col-sm-4 btn btn-primary" type="submit" onClick={handleClick}>Search</button>
   return (
     <form onSubmit={handleSubmit}>
-      <div className='row'>
-        <div className='col-10'>
-          <input 
-            type="text" 
-            value={searchStr}
-            onChange={(e) => setSearchStr(e.target.value) }
-            placeholder="Enter Stop number" 
-            className='search-textbox form-control' />
-        </div>
-
-        <div className='col-2'>
-          <button className="btn btn-primary search-button" type="submit">{magnifyingGlass}</button>
-        </div>
+      <div className='input-group'>
+        <input
+          type="text"
+          value={searchStr}
+          onChange={(e) => setSearchStr(e.target.value)}
+          placeholder="Enter Stop number"
+          className='search-textbox form-control' />
+        <span className='input-group-btn'>
+          <button className="btn btn-default search-button" type="submit"> {magnifyingGlass} </button>
+        </span>
       </div>
     </form>
   );

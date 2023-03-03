@@ -7,6 +7,8 @@ Simple react app that shows stop departures based on stop number/ID
 ## Backend config
 To use backend server, you need to create a JSON config file. An example config file is given below.
 
+`./backend/config.json`:
+
 ```JSON
 {
     "baseURL" : "https://api.opendata.metlink.org.nz/v1/stop-predictions?stop_id=",
