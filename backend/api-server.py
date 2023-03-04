@@ -20,7 +20,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-def getStopData(baseURL, stopID, apiKey):
+def getStopDepData(baseURL, stopID, apiKey):
     url = baseURL + str(stopID)
     print(url)
     headers = {
@@ -33,7 +33,7 @@ def getStopData(baseURL, stopID, apiKey):
         response.raise_for_status()
         return response.json()
     except HTTPError as http_err:
-        return http_err
+        return http_err.response.status_code
     except Exception as err:
         return err
 
@@ -69,9 +69,12 @@ def parseStatus(rawStatus):
 # Grab response from Metlink API then serve
 @app.route('/<stopID>')
 def main(stopID):
-    rawJSONfromMetlink = getStopData(baseURL=configParams["baseURL"], stopID=stopID, apiKey=configParams["apiKey"])
-    departuresList = rawJSONfromMetlink["departures"]
-
+    rawJSONfromMetlink = getStopDepData(baseURL=configParams["baseURL"], stopID=stopID, apiKey=configParams["apiKey"])
+    # If metlink server does not recognize stop number or is down
+    if type(rawJSONfromMetlink) != int:
+        departuresList = rawJSONfromMetlink["departures"]
+    else:
+        return Response('[{"httpError": ' + str(rawJSONfromMetlink) + '}]', mimetype='application/json')
 
     text_response = '[\n'
     for singleTrip in departuresList:
@@ -102,7 +105,7 @@ def main(stopID):
 
 
 if __name__ == "__main__":
-    #test = getStopData(baseURL=sys.argv[1], stopID=sys.argv[2], apiKey=sys.argv[3])
+    #test = getStopDepData(baseURL=sys.argv[1], stopID=sys.argv[2], apiKey=sys.argv[3])
     #print(test["departures"][0])
     configFile = open(sys.argv[1])
     configParams = json.load(configFile)

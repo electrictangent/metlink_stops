@@ -82,10 +82,8 @@ function SearchBar({ onSetStopNum, onSetStopNumSent }) {
     e.preventDefault();
     onSetStopNum(searchStr);
     onSetStopNumSent(true);
-    // console.log(stopNum);
   }
 
-//<button className="col-sm-4 btn btn-primary" type="submit" onClick={handleClick}>Search</button>
   return (
     <form onSubmit={handleSubmit}>
       <div className='input-group'>
@@ -111,25 +109,25 @@ function HeaderDepartureTable(){
   const stopName = "test";
 
   useEffect(() => {
-        const urlAPI = 'http://localhost:8080/' + stopNumVal; // backend API address
-        if(departures.length && !stopNumSent) {
-          
-          return;
-        }
-        const fetchData = async () => {
-          try {
-            const response = await fetch(urlAPI);
-            const json = await response.json();
-            setDepartures(json);
-            setStopNumSent(false);
-            console.log("success");
-          } catch (error) {
-            console.log("error", error);
-          }
-        };
-    
-        fetchData();
-    }, [departures, stopNumSent]);
+    const urlAPI = 'http://localhost:8080/' + stopNumVal; // backend API address
+    if (departures.length && !stopNumSent) {
+
+      return;
+    }
+    const fetchData = async () => {
+      try {
+        const response = await fetch(urlAPI);
+        const json = await response.json();
+        setDepartures(json);
+        setStopNumSent(false);
+        console.log("success");
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+
+    fetchData();
+  }, [departures, stopNumSent]);
 
   return (
     <>
