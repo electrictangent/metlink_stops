@@ -55,7 +55,9 @@ function DepartureTable({ departures }) {
   const rows = [];
 
   departures.forEach((singleDeparture) => {
-    rows.push(<DepartureRow singleDeparture={singleDeparture} key={singleDeparture.tripID} />);
+    if(!("stopName" in singleDeparture)){
+      rows.push(<DepartureRow singleDeparture={singleDeparture} key={singleDeparture.tripID} />);
+    }
   })
 
   return(
@@ -106,8 +108,10 @@ function HeaderDepartureTable(){
   const [departures, setDepartures] = useState([]);
   const [stopNumVal, setStopNum] = useState('5515');
   const [stopNumSent, setStopNumSent] = useState(false);
-  const stopName = "test";
+  // const stopName = "test";
+  let stopNumText = stopNumVal;
 
+  // TODO: add error handling and auto refresh every 30s
   useEffect(() => {
     const urlAPI = 'http://localhost:8080/' + stopNumVal; // backend API address
     if (departures.length && !stopNumSent) {
@@ -127,7 +131,7 @@ function HeaderDepartureTable(){
     };
 
     fetchData();
-  }, [departures, stopNumSent]);
+  }, [departures, stopNumSent, stopNumVal]);
 
   return (
     <>
@@ -141,7 +145,7 @@ function HeaderDepartureTable(){
     </div>
     <div className='container'>
       <br />
-      <h2>{stopNumVal} &emsp; {stopName}</h2>
+      <h2>{stopNumText.toUpperCase()} &emsp; {departures.length ? departures[0].stopName : "Fetching stop name"}</h2>
       <DepartureTable departures={departures} />
     </div>
     </>
