@@ -49,19 +49,15 @@ def parseArrivalAndDepartureTimes(dictObject):
     text = text[:-1] + '}'
     return text
 
-def parseDirectionText(routeName, direction, routeList):
-    # text = origin["name"] + " - " + destination["name"]
-    # text = text.replace("\'", "")
-    # text = text.replace("\"", "")
+def getRouteColors(routeName, routeList):
+    # Returns an array of hex colours
+    # ['foreground colour', 'background colour']
 
     for route in routeList:
         if route["route_short_name"] == routeName:
-            if direction == "inbound":
-                return route["route_long_name"]
-            else:
-                return route["route_desc"]
+            return ["#" + route["route_text_color"], "#" + route["route_color"]]
 
-    return "sad"
+    return ["#ffffff", "#12043f"]
 
 def parseStatus(rawStatus):
     if rawStatus == None:
@@ -97,8 +93,9 @@ def main(stopID):
 
     text_response = '[\n'
     # Add stop name as first list entry
-    text_response += '\t{"stopName": "' + departuresList[0]["name"] + '"},' 
+    text_response += '\t{"stopName": "' + departuresList[0]["name"] + '"},\n' 
     for singleTrip in departuresList:
+        colourArr = getRouteColors(singleTrip["service_id"], routeList)
         singleTripText = '\t{\n'
         # Add keys and values
         singleTripText += '\t\t"serviceID" : "' + singleTrip["service_id"] + '",\n'
@@ -109,6 +106,8 @@ def main(stopID):
         singleTripText += '\t\t"departure" : ' + parseArrivalAndDepartureTimes(singleTrip["departure"])  + ',\n'
         singleTripText += '\t\t"status" : "' + parseStatus(singleTrip["status"]) + '",\n'
         singleTripText += '\t\t"wheelchair" : ' + str(singleTrip["wheelchair_accessible"]).lower() + ',\n'
+        singleTripText += '\t\t"forecolor" : "' + colourArr[0] + '",\n'
+        singleTripText += '\t\t"backcolor" : "' + colourArr[1] + '",\n'
         singleTripText += '\t\t"tripID" : "' + str(singleTrip["trip_id"]) + '"\n'
         
         # Last item in array does not need a trailing comma for correct JSON

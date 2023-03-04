@@ -37,13 +37,12 @@ function DepartureRow({ singleDeparture }) {
     accesible = wheelchairIcon;
   }
 
-  // background color can be part of API response
-  const backgroundColor = "#12043f"
   return (
     <tr className={singleDeparture.status === "Cancelled" ? 'cancelled' : ''}>
       <td className='bold'>{ minsAway + " mins" }</td>
       <td> 
-        <div className='bold service-num' style={{ background : backgroundColor}} >{ singleDeparture.serviceID }</div>
+        {/* If cancelled, dont color route */}
+        <div className='bold service-num' style={singleDeparture.status === "Cancelled" ? { background : "#686868", color : "#444444" } : {background : singleDeparture.backcolor, color : singleDeparture.forecolor}} >{ singleDeparture.serviceID }</div>
       </td>  
       <td> { singleDeparture.direction } </td>
       <td> <span className={singleDeparture.status === "Delayed" ? 'delayed' : ''}>{ statusToIcon(singleDeparture.status) }</span> { accesible }</td>

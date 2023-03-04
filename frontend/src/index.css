@@ -70,14 +70,6 @@ th {
     border-radius: 0;
 }
 
-input[type=text]:focus{
-    outline: none !important;
-}
-
-.search-textbox:empty, .search-textbox:blank{
-    color: rgb(245, 245, 245);
-}
-
 .search-textbox:hover, .search-textbox:active, .search-textbox:focus {
     border-bottom: #ffffff solid 5px;
     color:rgb(245, 245, 245);
