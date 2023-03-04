@@ -23,13 +23,44 @@ function statusToIcon(status) {
   }
 }
 
-function DepartureRow({ singleDeparture }) {
+function getTimeToDepart(arrival, departure) {
   // TODO: Add code to represent arrival time in mintues from now
   // below is only a sketch - there are many more variables involved in estimated departure times
-  // probably is best to seperate into own function
-  const dateTime = new Date(singleDeparture.arrival.aimed);
+  //   "arrival": {
+  //     "expected": null
+  // },
+  // "departure": {
+  //     "aimed": "2023-03-04T15:14:00+13:00",
+  //     "expected": null
+  // },
   const dateTimeNow = new Date();
-  const minsAway = String(Math.round((dateTime - dateTimeNow)*0.001/60));
+
+  // If scheduled trip only, return aimed time for departure
+  if(arrival.expected === null && departure.expected === null){
+    const dateTime = new Date(departure.aimed);
+
+    return String(dateTime.getHours()) + ":" + String(dateTime.getMinutes()).padStart(2, '0');
+  } else if(arrival.expected === null && departure.expected !== null){
+    // If scheduled trip is about to depart
+    const dateTime = new Date(departure.expected);
+    return String(Math.round((dateTime - dateTimeNow)*0.001/60)) + " mins";
+  }
+
+  // If trip is about to reach stop
+  if (arrival.expected !== null) {
+    const dateTime = new Date(arrival.expected)
+    if (dateTimeNow < dateTime) {
+      const dateTimeNow = new Date();
+      return String(Math.round((dateTime - dateTimeNow) * 0.001 / 60)) + " mins";
+    }
+  }
+
+  // Else, trip is at stop
+  return "Due"
+}
+
+function DepartureRow({ singleDeparture }) {
+
 
   // Set the accesible icon
   let accesible = "";
@@ -39,7 +70,7 @@ function DepartureRow({ singleDeparture }) {
 
   return (
     <tr className={singleDeparture.status === "Cancelled" ? 'cancelled' : ''}>
-      <td className='bold'>{ minsAway + " mins" }</td>
+      <td className='bold'>{ getTimeToDepart(singleDeparture.arrival, singleDeparture.departure) }</td>
       <td> 
         {/* If cancelled, dont color route */}
         <div className='bold service-num' style={singleDeparture.status === "Cancelled" ? { background : "#686868", color : "#444444" } : {background : singleDeparture.backcolor, color : singleDeparture.forecolor}} >{ singleDeparture.serviceID }</div>
@@ -54,6 +85,7 @@ function DepartureTable({ departures }) {
   const rows = [];
 
   departures.forEach((singleDeparture) => {
+    // Ignore first entry as this entry contains stop name and no relevant trip data
     if(!("stopName" in singleDeparture)){
       rows.push(<DepartureRow singleDeparture={singleDeparture} key={singleDeparture.tripID} />);
     }
