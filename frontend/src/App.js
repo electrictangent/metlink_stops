@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // Font Awesome icon imports
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +17,26 @@ const clockIcon = <FontAwesomeIcon icon={faClock} />;
 const calendarIcon = <FontAwesomeIcon icon={faCalendar} />;
 const magnifyingGlass = <FontAwesomeIcon icon={faMagnifyingGlass} size="2x" />;
 const xMark = <FontAwesomeIcon icon={faXmark} />;
+
+function useInterval(callback, delay) {
+  const savedCallback = useRef();
+
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the interval.
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+}
 
 function statusToIcon(status) {
   if (status === "On Time") {
@@ -68,6 +88,10 @@ function getTimeToDepart(arrival, departure) {
   return "Due";
 }
 
+function LoadingSpinner() {
+  return(<span>Loading you stewpid</span>);
+}
+
 function DepartureRow({ singleDeparture }) {
   // Set the accesible icon
   let accesible = "";
@@ -116,7 +140,16 @@ function DepartureTable({ departures }) {
   const rows = [];
   let i = 0;
 
-  try {
+  // Error handling
+  // No data received
+  if (!departures.length) {
+    return <LoadingSpinner />;
+  } else if (departures[0] === "loading") {
+    return <LoadingSpinner />; 
+  } else if ("httpError" in departures[0]) {
+    // API returns an error (e.g. stop id not found)
+    return <h2>Stop not found or API down.</h2>;
+  } else {
     departures.forEach((singleDeparture) => {
       // Ignore first entry as this entry contains stop name and no relevant trip data
       if (!("stopName" in singleDeparture)) {
@@ -143,8 +176,6 @@ function DepartureTable({ departures }) {
         <tbody>{rows}</tbody>
       </table>
     );
-  } catch {
-    return <h2>Loading</h2>;
   }
 }
 
@@ -186,7 +217,7 @@ function SearchBar({ onSetStopNum, onSetStopNumSent }) {
 }
 
 export default function App() {
-  const [departures, setDepartures] = useState(["loading"]);
+  const [departures, setDepartures] = useState([]);
   const [stopNumVal, setStopNum] = useState("5515");
   const [stopNumSent, setStopNumSent] = useState(true);
   // const stopName = "test";
@@ -195,15 +226,19 @@ export default function App() {
   // TODO: add error handling and auto refresh every 30s
   useEffect(() => {
     const urlAPI = "http://localhost:8080/" + stopNumVal; // backend API address
-    if (departures.length && !stopNumSent) {
-      return;
-    }
+
     const fetchData = async () => {
+      // If we have already fetched the data and no request for a new data fetch sent
+      if (departures.length && !stopNumSent) {
+        return;
+      }
       try {
+        setDepartures(["loading"]);
+        setStopNumSent(false);
         const response = await fetch(urlAPI);
         const json = await response.json();
         setDepartures(json);
-        setStopNumSent(false);
+        
         console.log("success");
       } catch (error) {
         console.log("error", error);
@@ -212,19 +247,23 @@ export default function App() {
     fetchData();
   }, [departures, stopNumSent, stopNumVal]);
 
+  // Tell fetchData to fetch data every 30s
+  useInterval(() => {
+    setStopNumSent(true);
+  }, 30000);
+
   return (
     <>
       <SearchBar onSetStopNum={setStopNum} onSetStopNumSent={setStopNumSent} />
 
       <div className="container">
         <br />
-        <Suspense fallback={<p>Loading stop departures...</p>}>
-          <h2>
-            {stopNumText.toUpperCase()} &emsp;{" "}
-            {departures.length ? departures[0].stopName : "Fetching stop name"}
-          </h2>
-          <DepartureTable departures={departures} />
-        </Suspense>
+        <h2>
+          {stopNumText.toUpperCase()} &emsp;{" "}
+          {departures.length ? departures[0].stopName : <LoadingSpinner /> }
+        </h2>
+        
+        <DepartureTable departures={departures} />
       </div>
     </>
   );
