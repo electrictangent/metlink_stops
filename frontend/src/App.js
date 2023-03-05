@@ -89,7 +89,7 @@ function getTimeToDepart(arrival, departure) {
 }
 
 function LoadingSpinner() {
-  return(<span>Loading you stewpid</span>);
+  return <span>Loading you stewpid</span>;
 }
 
 function DepartureRow({ singleDeparture }) {
@@ -141,11 +141,12 @@ function DepartureTable({ departures }) {
   let i = 0;
 
   // Error handling
-  // No data received
+  // User opened web app for first time or nothing in search bar
   if (!departures.length) {
-    return <LoadingSpinner />;
+    return <h2>Enter a stop number in the searchbar.</h2>;
+    // No data received
   } else if (departures[0] === "loading") {
-    return <LoadingSpinner />; 
+    return <h2><LoadingSpinner /></h2>;
   } else if ("httpError" in departures[0]) {
     // API returns an error (e.g. stop id not found)
     return <h2>Stop not found or API down.</h2>;
@@ -179,8 +180,7 @@ function DepartureTable({ departures }) {
   }
 }
 
-function SearchBar({ onSetStopNum, onSetStopNumSent }) {
-  const [searchStr, setSearchStr] = useState("5515");
+function SearchBar({ onSetStopNum, onSetStopNumSent, searchStr, setSearchStr }) {
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -216,12 +216,19 @@ function SearchBar({ onSetStopNum, onSetStopNumSent }) {
   );
 }
 
+function StopTitle({ stopNum, depName }) {
+  return (
+    <h2>
+      {stopNum.toUpperCase()} &emsp; {depName}
+    </h2>
+  );
+}
+
 export default function App() {
   const [departures, setDepartures] = useState([]);
-  const [stopNumVal, setStopNum] = useState("5515");
-  const [stopNumSent, setStopNumSent] = useState(true);
-  // const stopName = "test";
-  let stopNumText = stopNumVal;
+  const [stopNumVal, setStopNum] = useState("");
+  const [stopNumSent, setStopNumSent] = useState(false);
+  const [searchStr, setSearchStr] = useState("");
 
   // TODO: add error handling and auto refresh every 30s
   useEffect(() => {
@@ -229,8 +236,14 @@ export default function App() {
 
     const fetchData = async () => {
       // If we have already fetched the data and no request for a new data fetch sent
-      if (departures.length && !stopNumSent) {
+      if (!stopNumSent) {
         return;
+      }
+      if (searchStr === ""){
+        setStopNumSent(false);
+
+        return setDepartures([]);
+        
       }
       try {
         setDepartures(["loading"]);
@@ -238,7 +251,7 @@ export default function App() {
         const response = await fetch(urlAPI);
         const json = await response.json();
         setDepartures(json);
-        
+
         console.log("success");
       } catch (error) {
         console.log("error", error);
@@ -254,15 +267,11 @@ export default function App() {
 
   return (
     <>
-      <SearchBar onSetStopNum={setStopNum} onSetStopNumSent={setStopNumSent} />
+      <SearchBar onSetStopNum={setStopNum} onSetStopNumSent={setStopNumSent} searchStr={searchStr} setSearchStr={setSearchStr} />
 
       <div className="container">
         <br />
-        <h2>
-          {stopNumText.toUpperCase()} &emsp;{" "}
-          {departures.length ? departures[0].stopName : <LoadingSpinner /> }
-        </h2>
-        
+        {departures.length ? <StopTitle stopNum={stopNumVal} depName={departures[0].stopName} /> : stopNumSent ? <LoadingSpinner /> : ""}
         <DepartureTable departures={departures} />
       </div>
     </>
