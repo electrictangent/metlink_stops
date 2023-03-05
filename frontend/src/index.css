@@ -39,9 +39,14 @@ table * {
 tr,
 td {
     border-style: none;
-    padding-bottom: 0.2em;
+    padding: 5px !important;
+    margin-bottom: 5px;
 
+}
 
+tr *,
+td *{
+    line-height: 40px;
 }
 
 th {
@@ -118,11 +123,16 @@ th {
 }
 
 .service-num {
+    position: relative;
+    display: block;
     padding: 0.3em;
-    border-radius: 2em;
-    min-width: 2em;
-    height: 2em;
+    border-radius: 2.5em;
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 16px;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .service-direction {
@@ -132,8 +142,8 @@ th {
 }
 
 .header {
-    background: rgb(0, 161, 255);
-    background: linear-gradient(0deg, rgba(0, 97, 255, 1) 0%, rgba(39, 39, 228, 1) 100%);
+    background: #1569CB;
+    /* background: linear-gradient(0deg, rgba(0, 97, 255, 1) 0%, rgba(39, 39, 228, 1) 100%); */
 }
 
 .delayed * {
@@ -145,4 +155,10 @@ th {
     /* text-decoration: line-through; */
     color: #686868;
     font-weight: 600;
+}
+
+.icons *{
+    font-size: 20px;
+    line-height: 14px;
+    margin-left: 10px;
 }
