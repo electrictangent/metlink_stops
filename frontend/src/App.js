@@ -9,6 +9,7 @@ import {
   faCalendar,
   faMagnifyingGlass,
   faXmark,
+  faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 
 const wheelchairIcon = <FontAwesomeIcon icon={faWheelchair} />;
@@ -17,6 +18,7 @@ const clockIcon = <FontAwesomeIcon icon={faClock} />;
 const calendarIcon = <FontAwesomeIcon icon={faCalendar} />;
 const magnifyingGlass = <FontAwesomeIcon icon={faMagnifyingGlass} size="2x" />;
 const xMark = <FontAwesomeIcon icon={faXmark} />;
+const loadingIcon = <FontAwesomeIcon icon={faSpinner} spinPulse={true} size="4x" />;
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -89,7 +91,7 @@ function getTimeToDepart(arrival, departure) {
 }
 
 function LoadingSpinner() {
-  return <span>Loading you stewpid</span>;
+  return <div className="loading">{loadingIcon}</div>;
 }
 
 function DepartureRow({ singleDeparture }) {
@@ -146,7 +148,7 @@ function DepartureTable({ departures }) {
     return <h2>Enter a stop number in the searchbar.</h2>;
     // No data received
   } else if (departures[0] === "loading") {
-    return <h2><LoadingSpinner /></h2>;
+    return <LoadingSpinner />;
   } else if ("httpError" in departures[0]) {
     // API returns an error (e.g. stop id not found)
     return <h2>Stop not found or API down.</h2>;
@@ -180,8 +182,12 @@ function DepartureTable({ departures }) {
   }
 }
 
-function SearchBar({ onSetStopNum, onSetStopNumSent, searchStr, setSearchStr }) {
-
+function SearchBar({
+  onSetStopNum,
+  onSetStopNumSent,
+  searchStr,
+  setSearchStr,
+}) {
   function handleSubmit(e) {
     e.preventDefault();
     onSetStopNum(searchStr);
@@ -239,11 +245,10 @@ export default function App() {
       if (!stopNumSent) {
         return;
       }
-      if (searchStr === ""){
+      // If there is no stop number or search string
+      if (searchStr === "" || stopNumVal === "") {
         setStopNumSent(false);
-
         return setDepartures([]);
-        
       }
       try {
         setDepartures(["loading"]);
@@ -252,7 +257,7 @@ export default function App() {
         const json = await response.json();
         setDepartures(json);
 
-        console.log("success");
+        // console.log("success");
       } catch (error) {
         console.log("error", error);
       }
@@ -267,11 +272,21 @@ export default function App() {
 
   return (
     <>
-      <SearchBar onSetStopNum={setStopNum} onSetStopNumSent={setStopNumSent} searchStr={searchStr} setSearchStr={setSearchStr} />
-
+      <SearchBar
+        onSetStopNum={setStopNum}
+        onSetStopNumSent={setStopNumSent}
+        searchStr={searchStr}
+        setSearchStr={setSearchStr}
+      />
       <div className="container">
         <br />
-        {departures.length ? <StopTitle stopNum={stopNumVal} depName={departures[0].stopName} /> : stopNumSent ? <LoadingSpinner /> : ""}
+        {departures.length ? (
+          <StopTitle stopNum={stopNumVal} depName={departures[0].stopName} />
+        ) : stopNumSent ? (
+          <LoadingSpinner />
+        ) : (
+          ""
+        )}
         <DepartureTable departures={departures} />
       </div>
     </>

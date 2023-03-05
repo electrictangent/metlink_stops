@@ -162,3 +162,11 @@ th {
     line-height: 40px;
     margin-left: 10px;
 }
+
+.loading {
+    position: relative;
+    width: 100%;
+    color: rgb(245, 245, 245);
+    text-align: center;
+    margin-top: 2em;
+}
