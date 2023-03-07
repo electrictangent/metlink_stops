@@ -4,7 +4,15 @@ Simple react app that shows stop departures based on stop number/ID
 
 ![App Screenshot](preview.png)
 
-## Backend config
+Created using `create-react-app`. Data for Metlink stop departures provided by the APIs avaliable at https://opendata.metlink.org.nz/
+
+## Try my app!
+
+An example of this app in action can be found at https://get a link.
+
+## Installation
+
+### Backend config
 To use backend server, you'll need to create a JSON config file. An example config file is given below.
 
 `./backend/config.json`:
@@ -21,3 +29,15 @@ To use backend server, you'll need to create a JSON config file. An example conf
 ```
 
 To start backend API server, use command `./api-server.py /path/to/config`.
+
+
+### Frontend config
+In the `./frontend/` folder, create a `.env` file with the following key:
+```
+REACT_APP_BACKEND_ADDR=http://backendaddr:port/
+```
+
+
+## Credits
+
+Icons provided by Font Awesome. CSS layout created using Bootstrap.

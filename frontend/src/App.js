@@ -1,3 +1,4 @@
+// require('dotenv').config;
 import { useState, useEffect, useRef } from "react";
 
 // Font Awesome icon imports
@@ -18,7 +19,10 @@ const clockIcon = <FontAwesomeIcon icon={faClock} />;
 const calendarIcon = <FontAwesomeIcon icon={faCalendar} />;
 const magnifyingGlass = <FontAwesomeIcon icon={faMagnifyingGlass} size="2x" />;
 const xMark = <FontAwesomeIcon icon={faXmark} />;
-const loadingIcon = <FontAwesomeIcon icon={faSpinner} spinPulse={true} size="4x" />;
+const loadingIcon = (
+  <FontAwesomeIcon icon={faSpinner} spinPulse={true} size="4x" />
+);
+
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -151,7 +155,12 @@ function DepartureTable({ departures }) {
     return <LoadingSpinner />;
   } else if ("httpError" in departures[0]) {
     // API returns an error (e.g. stop id not found)
-    return <h2>Stop not found or API down.</h2>;
+    return (
+      <>
+        <h2>Stop not found or API down.</h2>
+        <p>Error given: {String(departures[0].httpError)}</p>
+      </>
+    );
   } else {
     departures.forEach((singleDeparture) => {
       // Ignore first entry as this entry contains stop name and no relevant trip data
@@ -236,21 +245,20 @@ export default function App() {
   const [stopNumSent, setStopNumSent] = useState(false);
   const [searchStr, setSearchStr] = useState("");
 
-  // TODO: add error handling and auto refresh every 30s
   useEffect(() => {
-    const urlAPI = "http://localhost:8080/" + stopNumVal; // backend API address
-
     const fetchData = async () => {
       // If we have already fetched the data and no request for a new data fetch sent
       if (!stopNumSent) {
         return;
       }
       // If there is no stop number or search string
-      if (searchStr === "" || stopNumVal === "") {
+      if (stopNumVal === "") {
         setStopNumSent(false);
         return setDepartures([]);
       }
+
       try {
+        const urlAPI = process.env.REACT_APP_BACKEND_ADDR + stopNumVal; // backend API address
         setDepartures(["loading"]);
         setStopNumSent(false);
         const response = await fetch(urlAPI);
@@ -260,6 +268,7 @@ export default function App() {
         // console.log("success");
       } catch (error) {
         console.log("error", error);
+        setDepartures([{ httpError: error }]);
       }
     };
     fetchData();
