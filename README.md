@@ -8,12 +8,12 @@ Created using `create-react-app`. Data for Metlink stop departures provided by t
 
 ## Try my app!
 
-An example of this app in action can be found at https://get a link.
+An example of this app in action can be found at https://mldemo.electrictangent.com
 
-## Installation
+## Configuration
 
 ### Backend config
-To use backend server, you'll need to create a JSON config file. An example config file is given below.
+To use backend server, you'll need to create a JSON config file. An example config file is given below. You must name the file `config.json` and it must be in the same folder as `app.py`.
 
 `./backend/config.json`:
 
@@ -21,14 +21,12 @@ To use backend server, you'll need to create a JSON config file. An example conf
 {
     "baseURL" : "https://api.opendata.metlink.org.nz/v1/stop-predictions?stop_id=",
     "staticStopInfoURL" : "https://api.opendata.metlink.org.nz/v1/gtfs/routes?stop_id=",
-    "apiKey" : "api-key-here",
-    "host": "localhost",
-    "port": 8080
+    "apiKey" : "api-key-here"
 }
 
 ```
 
-To start backend API server, use command `./api-server.py /path/to/config`.
+To start backend API server, navigate to backend folder and use command `flask run`
 
 
 ### Frontend config
@@ -36,6 +34,8 @@ In the `./frontend/` folder, create a `.env` file with the following key:
 ```
 REACT_APP_BACKEND_ADDR=http://backendaddr:port/
 ```
+
+The address must point to your backend server.
 
 
 ## Credits

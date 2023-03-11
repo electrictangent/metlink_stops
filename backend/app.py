@@ -14,6 +14,8 @@ import requests
 import json
 from requests.exceptions import HTTPError
 
+configFile = open('./config.json')
+configParams = json.load(configFile)
 
 # Flask setup
 app = Flask(__name__)
@@ -45,9 +47,10 @@ def parseArrivalAndDepartureTimes(dictObject):
             text += ' "{}" : '.format(key) + '"{}" ,'.format(dictObject[key])
         else:
             text += ' "{}" : '.format(key) + 'null ,'
-    
+
     text = text[:-1] + '}'
     return text
+
 
 def getRouteColors(routeName, routeList):
     # Returns an array of hex colours
@@ -59,6 +62,7 @@ def getRouteColors(routeName, routeList):
 
     return ["#ffffff", "#12043f"]
 
+
 def parseStatus(rawStatus):
     if rawStatus == None:
         return "Scheduled"
@@ -68,12 +72,12 @@ def parseStatus(rawStatus):
         return rawStatus.capitalize()
 
 
-
 # Grab response from Metlink API then serve
 @app.route('/<stopID>')
 def main(stopID):
     # Fetching departure predictions
-    rawJSONfromMetlink = fetchAPIdata(baseURL=configParams["baseURL"], stopID=stopID, apiKey=configParams["apiKey"])
+    rawJSONfromMetlink = fetchAPIdata(
+        baseURL=configParams["baseURL"], stopID=stopID, apiKey=configParams["apiKey"])
     # If metlink server does not recognize stop number or is down
     if type(rawJSONfromMetlink) != int:
         departuresList = rawJSONfromMetlink["departures"]
@@ -81,35 +85,40 @@ def main(stopID):
         return Response('[{"httpError": ' + str(rawJSONfromMetlink) + '}]', mimetype='application/json')
 
     # Fetching route info for stop
-    rawJSONforRoutes = fetchAPIdata(baseURL=configParams["staticStopInfoURL"], stopID=stopID, apiKey=configParams["apiKey"])
+    rawJSONforRoutes = fetchAPIdata(
+        baseURL=configParams["staticStopInfoURL"], stopID=stopID, apiKey=configParams["apiKey"])
     # If metlink server does not recognize stop number or is down
     if type(rawJSONforRoutes) != int:
         routeList = rawJSONforRoutes
     else:
         routeList = None
 
-
-
-
     text_response = '[\n'
     # Add stop name as first list entry
-    text_response += '\t{"stopName": "' + departuresList[0]["name"] + '"},\n' 
+    text_response += '\t{"stopName": "' + departuresList[0]["name"] + '"},\n'
     for singleTrip in departuresList:
         colourArr = getRouteColors(singleTrip["service_id"], routeList)
         singleTripText = '\t{\n'
         # Add keys and values
-        singleTripText += '\t\t"serviceID" : "' + singleTrip["service_id"] + '",\n'
+        singleTripText += '\t\t"serviceID" : "' + \
+            singleTrip["service_id"] + '",\n'
 
         # singleTripText += '\t\t"direction" : "' + parseDirectionText(singleTrip["service_id"], singleTrip["direction"], routeList) + '",\n'
-        singleTripText += '\t\t"direction" : "' + singleTrip["destination"]["name"] + '",\n'
-        singleTripText += '\t\t"arrival" : ' + parseArrivalAndDepartureTimes(singleTrip["arrival"]) + ',\n'
-        singleTripText += '\t\t"departure" : ' + parseArrivalAndDepartureTimes(singleTrip["departure"])  + ',\n'
-        singleTripText += '\t\t"status" : "' + parseStatus(singleTrip["status"]) + '",\n'
-        singleTripText += '\t\t"wheelchair" : ' + str(singleTrip["wheelchair_accessible"]).lower() + ',\n'
+        singleTripText += '\t\t"direction" : "' + \
+            singleTrip["destination"]["name"] + '",\n'
+        singleTripText += '\t\t"arrival" : ' + \
+            parseArrivalAndDepartureTimes(singleTrip["arrival"]) + ',\n'
+        singleTripText += '\t\t"departure" : ' + \
+            parseArrivalAndDepartureTimes(singleTrip["departure"]) + ',\n'
+        singleTripText += '\t\t"status" : "' + \
+            parseStatus(singleTrip["status"]) + '",\n'
+        singleTripText += '\t\t"wheelchair" : ' + \
+            str(singleTrip["wheelchair_accessible"]).lower() + ',\n'
         singleTripText += '\t\t"forecolor" : "' + colourArr[0] + '",\n'
         singleTripText += '\t\t"backcolor" : "' + colourArr[1] + '",\n'
-        singleTripText += '\t\t"tripID" : "' + str(singleTrip["trip_id"]) + '"\n'
-        
+        singleTripText += '\t\t"tripID" : "' + \
+            str(singleTrip["trip_id"]) + '"\n'
+
         # Last item in array does not need a trailing comma for correct JSON
         if singleTrip == departuresList[-1]:
             singleTripText += '\t}\n'
@@ -118,18 +127,16 @@ def main(stopID):
 
         # Add to response
         text_response += singleTripText
-    
 
     # Finish text_response and make string JSON compliant
-    text_response += "\n]"    
+    text_response += "\n]"
     return Response(text_response, mimetype='application/json')
 
 
-if __name__ == "__main__":
-    #test = fetchAPIdata(baseURL=sys.argv[1], stopID=sys.argv[2], apiKey=sys.argv[3])
-    #print(test["departures"][0])
-    configFile = open(sys.argv[1])
-    configParams = json.load(configFile)
+# if __name__ == "__main__":
+#     #test = fetchAPIdata(baseURL=sys.argv[1], stopID=sys.argv[2], apiKey=sys.argv[3])
+#     #print(test["departures"][0])
+#     configFile = open(sys.argv[1])
+#     configParams = json.load(configFile)
 
-    app.run(host=configParams["host"], port=configParams["port"])
-
+#     app.run(host=configParams["host"], port=configParams["port"])
