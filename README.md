@@ -8,7 +8,7 @@ Created using `create-react-app`. Data for Metlink stop departures provided by t
 
 ## Try my app!
 
-An example of this app in action can be found at https://mldemo.electrictangent.com
+An example of this app in action can be found at https://ml.electrictangent.com
 
 ## Configuration
 
@@ -35,7 +35,7 @@ In the `./frontend/` folder, create a `.env` file with the following key:
 REACT_APP_BACKEND_ADDR=http://backendaddr:port/
 ```
 
-The address must point to your backend server.
+The address must point to your backend server (include trailing `/` slash).
 
 
 ## Credits
